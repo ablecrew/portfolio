@@ -609,7 +609,7 @@ function Footer() {
         {/* Bottom bar */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
           <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.7rem", letterSpacing: "1px", color: "rgba(255,255,255,0.2)" }}>
-            © 2026 Crestline Technologies — All rights reserved.
+            © 2026 Dande Teddy — All rights reserved.
           </div>
           <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.7rem", color: "rgba(255,255,255,0.2)" }}>
             Crafted with precision in <span style={{ color: "#00f5d4" }}>Nairobi, Kenya</span>
