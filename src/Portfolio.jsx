@@ -22,10 +22,10 @@ const SKILLS = [
 ];
 
 const PROJECTS = [
-  { title: "NexaCommerce", desc: "Full-stack e-commerce platform with Django backend, React frontend, and real-time inventory management.", tags: ["React", "Django", "PostgreSQL"], accentColor: "#00f5d4", icon: "🛒" },
-  { title: "BrandForge Studio", desc: "Brand identity design system for a fintech startup — logo, UI kit, and style guide.", tags: ["Figma", "Illustrator", "UI/UX"], accentColor: "#7b2fff", icon: "🎨" },
-  { title: "PulseAnalytics", desc: "Data visualization dashboard with real-time charts, Django REST API, and advanced filtering.", tags: ["React", "Django", "D3.js"], accentColor: "#ff6b35", icon: "📊" },
-  { title: "ConnectSphere", desc: "Social networking web app with messaging, notifications, and AI-powered content feeds.", tags: ["React", "Django", "WebSockets"], accentColor: "#00cfff", icon: "🌐" },
+  { title: "Eventify", desc: "Full-stack e-commerce platform with Node.js backend, HTML5/CSS/JS frontend, and real-time dashboard management.", tags: ["HTML5/CSS/JS", "Node.js", "PostgreSQL"], accentColor: "#00f5d4", icon: "📊" },
+  { title: "Onpoint-Cyber", desc: "Modern platform for a modern cyber — logo, UI kit, and style guide.", tags: ["React", "Node.js", "Photoshop"], accentColor: "#7b2fff", icon: "🎨" },
+  { title: "FieldScope", desc: "Data visualization dashboard with real-time charts, Django REST API, and advanced filtering.", tags: ["React", "Django", "D3.js"], accentColor: "#ff6b35", icon: "📊" },
+  { title: "MC Portfolio", desc: "Social networking web app with messaging, notifications, and AI-powered content feeds.", tags: ["React", "Node.js", "WebSockets"], accentColor: "#00cfff", icon: "🌐" },
   { title: "MotionMark", desc: "Animated marketing site with scroll-triggered visuals, custom illustrations, and CMS integration.", tags: ["HTML/CSS", "GSAP", "Figma"], accentColor: "#f72585", icon: "✨" },
   { title: "TaskFlow Pro", desc: "Project management SaaS with Kanban boards, team roles, and Django-powered REST backend.", tags: ["React", "Django", "PostgreSQL"], accentColor: "#06d6a0", icon: "📋" },
 ];
@@ -556,7 +556,7 @@ function Footer() {
             <div style={{ display: "flex", gap: 12, marginTop: 20 }}>
               {[
                 { icon: <IconGithub />, href: "https://github.com/ablecrew" },
-                { icon: <IconEmail />, href: "mailto:tonnyonyango79@gmail.com" },
+                { icon: <IconEmail />, href: "mailto:teddy.dande4@gmail.com" },
                 { icon: <IconPhone />, href: "tel:+254707528980" },
               ].map(({ icon, href }, i) => (
                 <a key={i} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
@@ -590,7 +590,7 @@ function Footer() {
             <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.6rem", letterSpacing: "3px", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 20 }}>Contact</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
-                ["tonnyonyango79@gmail.com", "mailto:tonnyonyango79@gmail.com"],
+                ["teddy.dande4@gmail.com", "mailto:teddy.dande4@gmail.com"],
                 ["+254 707 528 980", "tel:+254707528980"],
                 ["github.com/ablecrew", "https://github.com/ablecrew"],
                 ["Nairobi, Kenya", "https://maps.google.com/?q=Nairobi,Kenya"],
