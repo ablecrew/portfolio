@@ -31,10 +31,10 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { icon: "⚡", title: "Full Stack Development", desc: "End-to-end web apps built with React & Django — from database architecture to pixel-perfect UI.", price: "From $500" },
-  { icon: "🎨", title: "Brand Identity Design", desc: "Logo, color systems, typography, and brand guidelines that make your business unforgettable.", price: "From $200" },
-  { icon: "🖥️", title: "UI/UX Design", desc: "Wireframes, prototypes, and production-ready Figma designs that users love to interact with.", price: "From $300" },
-  { icon: "🔧", title: "API Development", desc: "Robust, scalable Django REST APIs, third-party integrations, and backend architecture.", price: "From $400" },
+  { icon: "⚡", title: "Full Stack Development", desc: "End-to-end web apps built with React & Django — from database architecture to pixel-perfect UI.", price: "" },
+  { icon: "🎨", title: "Brand Identity Design", desc: "Logo, color systems, typography, and brand guidelines that make your business unforgettable.", price: "" },
+  { icon: "🖥️", title: "UI/UX Design", desc: "Wireframes, prototypes, and production-ready Figma designs that users love to interact with.", price: "" },
+  { icon: "🔧", title: "API Development", desc: "Robust, scalable Django REST APIs, third-party integrations, and backend architecture.", price: "" },
 ];
 
 const TESTIMONIALS = [
@@ -183,7 +183,7 @@ function Hero() {
         </div>
 
         <div style={{ display: "flex", gap: 48, justifyContent: "center", marginTop: 80, flexWrap: "wrap" }}>
-          {[["50+", "Projects"], ["3+", "Years Exp."], ["30+", "Clients"], ["100%", "Satisfaction"]].map(([num, label]) => (
+          {[["20+", "Projects"], ["3+", "Years Exp."], ["30+", "Clients"], ["100%", "Satisfaction"]].map(([num, label]) => (
             <div key={label} style={{ textAlign: "center" }}>
               <div style={{ fontFamily: "'Montserrat',sans-serif", fontWeight: 900, fontSize: "1.8rem", color: "#00f5d4" }}>{num}</div>
               <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginTop: 4 }}>{label}</div>
@@ -609,7 +609,7 @@ function Footer() {
         {/* Bottom bar */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
           <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.7rem", letterSpacing: "1px", color: "rgba(255,255,255,0.2)" }}>
-            © 2026 Dande Teddy — All rights reserved.
+            © 2024 Dande Teddy — All rights reserved.
           </div>
           <div style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "0.7rem", color: "rgba(255,255,255,0.2)" }}>
             Crafted with precision in <span style={{ color: "#00f5d4" }}>Nairobi, Kenya</span>
