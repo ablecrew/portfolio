@@ -102,8 +102,7 @@ export default function Home() {
                     color: 'var(--text-secondary)',
                     lineHeight: 1.8,
                 }}>
-                    Nairobi-based creative technologist crafting immersive digital experiences —
-                    where pixel-perfect design meets robust engineering. Specializing in full-stack
+                    Nairobi-based creative technologist crafting immersive digital experiences, where pixel-perfect design meets robust engineering. Specializing in full-stack
                     development, mobile apps (Android & iOS), and brand identity design.
                 </p>
 
