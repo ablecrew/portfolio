@@ -4,7 +4,7 @@ const TESTIMONIALS = [
     {
         name: "Sarah Kamau",
         role: "CEO, TechVentures KE",
-        text: "Crestline delivered a stunning brand identity and a fully functional web app in record time. Truly a rare talent who bridges design and engineering seamlessly.",
+        text: "Solvara delivered a stunning brand identity and a fully functional web app in record time. Truly a rare talent who bridges design and engineering seamlessly.",
         avatar: "SK"
     },
     {
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     {
         name: "Amira Hassan",
         role: "Product Manager, DataSync",
-        text: "The dashboard Crestline built transformed how our team interacts with data. Exceptional attention to detail and a deep understanding of user needs.",
+        text: "The dashboard Solvara built transformed how our team interacts with data. Exceptional attention to detail and a deep understanding of user needs.",
         avatar: "AH"
     },
 ];
