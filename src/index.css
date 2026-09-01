@@ -1,1 +1,316 @@
 @import "tailwindcss";
+
+/* Modern Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* CSS Variables for Themes */
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a2e;
+    --bg-hover: #24243a;
+    --bg-input: rgba(255,255,255,0.03);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b8;
+    --text-muted: #6b6b80;
+    --accent: #00f5d4;
+    --accent-secondary: #7b2fff;
+    --accent-gradient: linear-gradient(135deg, #00f5d4, #7b2fff);
+    --border-color: rgba(255,255,255,0.06);
+    --shadow: 0 8px 32px rgba(0,0,0,0.4);
+    --shadow-hover: 0 12px 48px rgba(0,0,0,0.6);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f5f5f7;
+    --bg-secondary: #e8e8ed;
+    --bg-card: #ffffff;
+    --bg-hover: #f0f0f5;
+    --bg-input: rgba(0,0,0,0.03);
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a4a5e;
+    --text-muted: #8a8a9e;
+    --border-color: rgba(0,0,0,0.08);
+    --shadow: 0 8px 32px rgba(0,0,0,0.08);
+    --shadow-hover: 0 12px 48px rgba(0,0,0,0.12);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
+
+/* Book Layout Styles */
+.book-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.book {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    perspective: 2000px;
+    flex: 1;
+}
+
+.book-sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.book-sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.book-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-page {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    animation: pageOpen 0.5s ease-out;
+}
+
+.book-page:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes pageOpen {
+    0% {
+        opacity: 0;
+        transform: translateX(30px) rotateY(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0);
+    }
+}
+
+/* Page Flip Animation */
+.page-flip {
+    animation: pageFlip 0.6s ease-out;
+}
+
+@keyframes pageFlip {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+        transform-origin: left center;
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Utility Classes */
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.accent-border {
+    border-color: var(--accent);
+}
+
+.accent-bg {
+    background: var(--accent-gradient);
+}
+
+/* Selection Color */
+::selection {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Focus Styles */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Smooth Loading */
+img,
+svg {
+    transition: var(--transition);
+}
+
+/* Print Styles */
+@media print {
+    .book-sidebar {
+        display: none;
+    }
+
+    .book-page {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVE BREAKPOINTS - FIXED */
+/* ============================================ */
+
+/* Large screens (1024px and up) */
+@media (max-width: 1024px) {
+    .book {
+        flex-direction: column;
+    }
+
+    .book-sidebar {
+        flex: none;
+        position: static;
+        max-height: none;
+        padding-right: 0;
+    }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .book-container {
+        padding: 1rem;
+    }
+
+    .book-page {
+        padding: 1.5rem;
+    }
+
+    /* Hide desktop navigation */
+    .desktop-nav {
+        display: none !important;
+    }
+
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+
+    /* Grid changes */
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Hide sidebar on tablet */
+    .book-sidebar {
+        display: none;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .book-container {
+        padding: 0.5rem;
+    }
+
+    .book-page {
+        padding: 1rem;
+        border-radius: var(--radius-sm);
+    }
+}
+
+/* Show desktop navigation on larger screens */
+@media (min-width: 769px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+
+    .mobile-menu-btn {
+        display: none !important;
+    }
+
+    .book-sidebar {
+        display: block !important;
+    }
+}
